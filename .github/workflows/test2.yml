@@ -1,6 +1,9 @@
 name: Not Lab
 # This workflow is triggered on pushes to the repository.
-on: [push]
+on:
+  workflow_dispatch:
+  pull_request:
+    types: [assigned, opened, synchronize, reopened, closed]
 
 jobs:
   build:
